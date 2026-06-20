@@ -1,0 +1,4 @@
+interface:
+  display_name: "Study Mindmap"
+  short_description: "Turn completed study chapters into offline mind maps"
+  default_prompt: "Use $skill-mindmap chap3 to generate an offline Markmap from my completed study chapter."
