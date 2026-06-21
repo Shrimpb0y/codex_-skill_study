@@ -1,0 +1,29 @@
+name: Validate skill
+
+on:
+  push:
+    paths:
+      - "skill-study/**"
+      - "skill-mindmap/**"
+      - "scripts/validate_skill.py"
+      - ".github/workflows/validate-skill.yml"
+  pull_request:
+    paths:
+      - "skill-study/**"
+      - "skill-mindmap/**"
+      - "scripts/validate_skill.py"
+      - ".github/workflows/validate-skill.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate metadata, references, and encoding
+        run: python scripts/validate_skill.py

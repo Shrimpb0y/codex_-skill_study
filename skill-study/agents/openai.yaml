@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Study"
+  short_description: "Guided course study from slides and notes"
+  default_prompt: "Use $skill-study to teach my uploaded course material step by step from zero foundation."
